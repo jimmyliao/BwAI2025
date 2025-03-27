@@ -1,1 +1,1 @@
-# learn_genai_2025
+# BuildWithAI 2025
