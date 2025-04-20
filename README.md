@@ -14,11 +14,9 @@
 | **Colab Files** | Gemini 圖片生成  | [04_Colab_Gemini_Image.ipynb](https://github.com/jimmyliao/BwAI2025/blob/main/04_Colab_Gemini_Image.ipynb)                      |
 |                 | Imagen3 圖片生成 | [05_Colab_Imagen3.ipynb](https://github.com/jimmyliao/BwAI2025/blob/main/05_Colab_Imagen3.ipynb)                                |
 | **Events** | **Build with AI 2025 - Taipei 四月加開場** , Date: 2025-04-10 | [event](https://gdg.community.dev/e/m2bd5n/), <br/> [Slides](https://drive.google.com/file/d/1dozOz_GSxqmi2qXHXbGFPpyeV32rt1C0/view)    |
-|            | **Build with AI 2025 - KaoHsiung** , Date: 2025-04-20        | [event](https://gdg.community.dev/events/details/google-gdg-kaohsiung-presents-build-with-ai-kaohsiung-2025-your-workshop-in-april/), <br/> [Slides]([https://drive.google.com/file/d/1seZbQ662Puy0bmaaxMMW7QTXmv1pgAuP/view?usp=sharing](https://drive.google.com/file/d/1seZbQ662Puy0bmaaxMMW7QTXmv1pgAuP/view?usp=sharing)) |
+|            | **Build with AI 2025 - KaoHsiung** , Date: 2025-04-20        | [event](https://gdg.community.dev/events/details/google-gdg-kaohsiung-presents-build-with-ai-kaohsiung-2025-your-workshop-in-april/), <br/> [Slides](https://drive.google.com/file/d/1dozOz_GSxqmi2qXHXbGFPpyeV32rt1C0/view?usp=sharing) |
 |            | **Build with AI 2025 - ChangHua** , Date: 2025-05-24        |  |
 |            | **Build with AI 2025 - TaiChung** , Date: 2025-06-08        |  |
-
-
 
 
 
