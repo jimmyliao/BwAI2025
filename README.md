@@ -1,5 +1,5 @@
-# BuildWithAI 2025: https://bit.ly/BwAI2025-Jimmy
-## https://github.com/jimmyliao/BwAI2025
+# BuildWithAI 2025: https://github.com/jimmyliao/BwAI2025
+@@ https://bit.ly/BwAI2025-Jimmy
 
 <table>
   <tr>
