@@ -20,3 +20,7 @@
 
 
 
+AI人工智慧與機器學習認證課程 (2025) -> 
+https://jimmyliao.notion.site/AI-2025-19fca84aac4980a0bf9be4d604b1bbf2
+
+
