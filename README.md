@@ -1,5 +1,5 @@
 # BuildWithAI 2025: https://github.com/jimmyliao/BwAI2025
-@@ https://bit.ly/BwAI2025-Jimmy
+## https://bit.ly/BwAI2025-Jimmy
 
 <table>
   <tr>
@@ -18,10 +18,5 @@
 |            | **Build with AI 2025 - KaoHsiung** , Date: 2025-04-20        | [event](https://gdg.community.dev/events/details/google-gdg-kaohsiung-presents-build-with-ai-kaohsiung-2025-your-workshop-in-april/), <br/> [Slides](https://drive.google.com/file/d/1dozOz_GSxqmi2qXHXbGFPpyeV32rt1C0/view?usp=sharing) |
 |            | **Build with AI 2025 - ChangHua** , Date: 2025-05-24        |  |
 |            | **Build with AI 2025 - TaiChung** , Date: 2025-06-08        |  |
-
-
-
-AI人工智慧與機器學習認證課程 (2025) -> 
-https://jimmyliao.notion.site/AI-2025-19fca84aac4980a0bf9be4d604b1bbf2
 
 
