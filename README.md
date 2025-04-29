@@ -3,10 +3,11 @@
 
 <table>
   <tr>
-    <td align="left"><img src="https://github.com/user-attachments/assets/6b54df53-12d5-4c27-bc29-4673adc7259e" alt="drawing" style="width:320px;"/></td>
+    <td align="left"><img src="https://github.com/user-attachments/assets/c5549aa2-f7cc-44a4-a774-2983b5927fc7" alt="drawing" style="width:320px;"/></td>
 <!--     <td valign="middle" align="left"><a href="https://bit.ly/BwAI2025-Jimmy" style="font-size: 2.5em;">https://bit.ly/BwAI2025-Jimmy</a></td> -->
   </tr>
 </table>
+
 
 
 | Category                      | Details                                                                                                                               | Link(s)                                                                                                                                                                                             |
