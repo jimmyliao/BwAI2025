@@ -12,7 +12,7 @@
 | **Events** | **Build with AI 2025 - Taipei 四月加開場** , Date: 2025-04-10 | [event](https://gdg.community.dev/e/m2bd5n/), <br/> [Slides](https://drive.google.com/file/d/1dozOz_GSxqmi2qXHXbGFPpyeV32rt1C0/view)    |
 |            | **Build with AI 2025 - KaoHsiung** , Date: 2025-04-20        | [event](https://gdg.community.dev/events/details/google-gdg-kaohsiung-presents-build-with-ai-kaohsiung-2025-your-workshop-in-april/), <br/> [Slides](https://drive.google.com/file/d/1dozOz_GSxqmi2qXHXbGFPpyeV32rt1C0/view?usp=sharing) |
 |            | **實作與研究: Agent 之間對話的可行性, GDG Taipei** , Date: 2025-05-22        |  |
-|            | **Build with AI 2025 實作與研究: Agent 之間對話的可行性 - ChangHua** , Date: 2025-05-24        | [event](https://gdg.community.dev/events/details/google-gdg-changhua-presents-build-with-ai-2025zhang-hua-chang-wu-yue-xiao-ju/), <br/> [Slides] |
+|            | ~Build with AI 2025 實作與研究: Agent 之間對話的可行性 - ChangHua , Date: 2025-05-24~        | [event](https://gdg.community.dev/events/details/google-gdg-changhua-presents-build-with-ai-2025zhang-hua-chang-wu-yue-xiao-ju/), <br/> [Slides] |
 |            | **The Future of AI Agent 2025 - Taipei** , Date: 2025-05-25        |  |
 |            | **Build with AI 2025 - TaiChung** , Date: 2025-06-08        | [event](https://gdg.community.dev/e/mvqp5k/), <br/> Slides | 
 |            | **Cloud Summit Taipei codelab** , Date: 2025-06-12        | event, <br/> Slides | 
