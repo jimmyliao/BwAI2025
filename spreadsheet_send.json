@@ -1,0 +1,179 @@
+{
+  "name": "spreadsheet-send",
+  "nodes": [
+    {
+      "parameters": {
+        "fromEmail": "<你的Gmail寄信信箱>",
+        "toEmail": "<收信人>",
+        "subject": "Your daily food entry report",
+        "html": "=您好,\n\n{{ $json.formattedFoodSummary }}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        720,
+        0
+      ],
+      "id": "e4967bc1-7e11-4a46-8f64-5c7a72318bad",
+      "name": "Send Email",
+      "webhookId": "98e54661-f333-442a-b96a-92bf3ad6c1d8",
+      "credentials": {
+        "smtp": {
+          "id": "QpRmLMtyg6J0Vnwx",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        -180
+      ],
+      "id": "362ae116-90fe-455e-96ce-9f3b6a9bbb6e",
+      "name": "定時檢查",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {},
+      "name": "手動測試!",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "0d2a60b4-a9f6-48f4-aec5-0fe7c9f11589"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "sheetId": "1sx-_Z9hIk7kv6dNy2pdXHJZ8JL0rJtC8nRyoAbwPTrw",
+        "range": "A:C",
+        "options": {}
+      },
+      "name": "Google Sheets Read",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        220,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "16cea119-6636-4afd-8bb2-9b2c535dd541",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WcdAxJfO9y6Cc9wY",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# 獲取傳入的 JSON 資料\n# 假設您的輸入是單一 JSON 物件，其中包含 'total' 和 'daily_entry' 鍵\n\n# 從第一個輸入項目的 json 屬性中獲取 total 和 daily_entry\ninput_data = items[0].json\n\ntotal_calories = input_data.get('total')\ndaily_entries = input_data.get('daily_entry')\n\noutput_string = \"\"\n\n# 優先顯示總熱量\nif total_calories is not None:\n    output_string += f\"今日您的食物攝取總熱量: {total_calories} 大卡<br><br>\"\nelse:\n    output_string += \"今日您的食物攝取總熱量: 無法取得<br><br>\"\n\noutput_string += \"飲食紀錄如下:<br><br>\"\n\nfor entry in daily_entries:\n    food_name = entry['food_name']\n    calories_str = entry['calories']\n    try:\n        # 嘗試將熱量轉換為整數，如果失敗則保持原始字串\n        calories_int = int(calories_str)\n        output_string += f\"- {food_name}: {calories_int} 大卡<br>\"\n    except ValueError:\n        output_string += f\"- {food_name}: {calories_str} 大卡 (熱量格式錯誤)<br>\"\n\n# 將結果作為新的 JSON 屬性輸出\n# 同時也將 total_calories 原樣輸出，方便後續使用\nreturn [{'json': {\n    'formattedFoodSummary': output_string,\n    'totalCalories': total_calories\n}}]\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        0
+      ],
+      "id": "ab956014-cbbb-489d-9da2-949a0db6c1d0",
+      "name": "準備信件內容"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\n\ndaily_entry_list = []\nsum_of_calories = 0\nresult_resp = {}\n\nfor item in _input.all():\n  # item.json.myNewField = 1\n  daily_food_item = {\n    \"food_name\": item.json['Food Name'],\n    \"calories\": item.json.Calories\n  }\n\n  sum_of_calories += int(item.json.Calories)\n\n  daily_entry_list.append(daily_food_item)\n\nresult_resp[\"total\"] = sum_of_calories\nresult_resp[\"daily_entry\"] = daily_entry_list\n\n# return _input.all()\n\nreturn result_resp"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        0
+      ],
+      "id": "c3156f0f-42ca-42de-a98f-73ed1567997f",
+      "name": "計算總熱量"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "定時檢查": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "手動測試!": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Read": {
+      "main": [
+        [
+          {
+            "node": "計算總熱量",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "準備信件內容": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "計算總熱量": {
+      "main": [
+        [
+          {
+            "node": "準備信件內容",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "938ec9a9-b123-4b8f-ab78-93c5c1084a5a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f7e9932ec47aae6c9413e605afab500fc4d8c589bf1630afadfe021761786a86"
+  },
+  "id": "DMXnyVaTzbvhNE1K",
+  "tags": []
+}
