@@ -1,6 +1,7 @@
 # BuildWithAI 2025: 
 ### https://memo.jimmyliao.net/
 ### https://bit.ly/BwAI2025-Jimmy
+## Stay Tuned... ADK/A2A/Agent Workshop -> http://github.com/orgs/AgentWorkshop
 
 <img width="240" src="https://github.com/user-attachments/assets/c5549aa2-f7cc-44a4-a774-2983b5927fc7" alt="drawing" />
 
@@ -17,6 +18,9 @@
 |            | **Build with AI 2025 - TaiChung** , Date: 2025-06-08, Topic: **Build fitness coach with Gemini and n8n part 1**        | [event](https://gdg.community.dev/e/mvqp5k/), <br/> [Slides](https://bit.ly/bwai0608) <img width="240" alt="bitly-qr" src="https://github.com/user-attachments/assets/fee8839e-88c6-4632-98c6-500208e8cd8d" /> | |
 |            | **Cloud Summit Taipei codelab** , Date: 2025-06-12        | event, <br/> Slides | 
 |            | **I/O Extended codelab** , Date: 2025-06-14        | event, <br/> Slides | 
+|            | **Build with AI - ChangHua , Date: 2025-06-28**        | [event](https://gdg.community.dev/e/mbg6xu/), <br/> [Slides](https://bit.ly/bwai0628) |
+
+
 
 
 
